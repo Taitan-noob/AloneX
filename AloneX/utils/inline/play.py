@@ -4,7 +4,7 @@ import time
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
-from AnonX.utils.formatters import time_to_seconds
+from AloneX.utils.formatters import time_to_seconds
 
 
 ## After Edits with Timer Bar
