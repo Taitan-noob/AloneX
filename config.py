@@ -19,7 +19,7 @@ OWNER_ID = list(
 SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/TaitanXbot")
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/DOSTO_KI_PIYAR")
+    "SUPPORT_GROUP", "https://t.me/TaitanXSupport")
 
 DURATION_LIMIT_MIN = int(
     getenv("DURATION_LIMIT", "59006099")
@@ -35,7 +35,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/taitangamer/TaitanXMusic-Op",
+    "https://github.com/Taitan-noob/AloneX",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
