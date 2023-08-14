@@ -7,44 +7,39 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID",))
-API_HASH = getenv("API_HASH",)
-
-BOT_TOKEN = getenv("BOT_TOKEN",)
-
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+API_ID = int(getenv("API_ID", "21840776"))
+API_HASH = getenv("API_HASH", "a83dc6bea8b64c2191b2fe631f1097a9")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "ᴛᴀɪᴛᴀɴ ✘ ᴍᴜsɪᴄ")
+OWNER_ID = list(
+    map(int, getenv("OWNER_ID", "1362133845").split())
+)
+SUPPORT_CHANNEL = getenv(
+    "SUPPORT_CHANNEL", "https://t.me/TaitanXbot")
+SUPPORT_GROUP = getenv(
+    "SUPPORT_GROUP", "https://t.me/DOSTO_KI_PIYAR")
 
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "1000")
+    getenv("DURATION_LIMIT", "59006099")
 )
 
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1099890")
 )
 
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID",))
+HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "ᴀʟᴏɴᴇ x ᴍᴜsɪᴄ")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
-OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6079943111").split())
+UPSTREAM_REPO = getenv(
+    "UPSTREAM_REPO",
+    "https://github.com/taitangamer/TaitanXMusic-Op",
 )
-
-HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
-
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
-
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/TeamAloneOp/AloneX")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
 GIT_TOKEN = getenv("GIT_TOKEN", None)
-
-SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/AloneXBots")
-SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/AlonesHeaven")
-
-SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
 
@@ -52,47 +47,34 @@ AUTO_LEAVE_ASSISTANT_TIME = int(
     getenv("ASSISTANT_LEAVE_TIME", "5400")
 )
 
-AUTO_SUGGESTION_TIME = int(
-    getenv("AUTO_SUGGESTION_TIME", "5400")
-)
-
-AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", None)
-
-SET_CMDS = getenv("SET_CMDS", True)
-
 AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
 
-PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
+PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", "False")
 
 YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "5"))
-
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "6"))
 
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/TeamAloneOp/AloneX/fork")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://t.me/taitangamer")
 
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
-VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "5"))
-
+VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "50"))
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "50"))
-
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "50"))
 
 CLEANMODE_DELETE_MINS = int(
-    getenv("CLEANMODE_MINS", "10")
+    getenv("CLEANMODE_MINS", "5")
 )
 
 TG_AUDIO_FILESIZE_LIMIT = int(
     getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600")
 )
-
 TG_VIDEO_FILESIZE_LIMIT = int(
-    getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824")
+    getenv("TG_VIDEO_FILESIZE_LIMIT", "2073741824")
 )
-# https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION1", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -101,79 +83,75 @@ STRING5 = getenv("STRING_SESSION5", None)
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
 LOG = 2
-LOG_FILE_NAME = "ᴀʟᴏɴᴇ log.txt"
+LOG_FILE_NAME = "taitanx.txt"
 adminlist = {}
 lyrical = {}
-DEV = 6045293810
 chatstats = {}
 userstats = {}
 clean = {}
-votemode = {}
-autoclean = []
-confirmer = {}
 
 autoclean = []
 
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/75a6f636ab6704b6befd2.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/d50c381e1b31f93ecf46e.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://te.legra.ph/file/eee5e3d03dbfcf6514595.jpg",
+    "https://telegra.ph/file/d50c381e1b31f93ecf46e.jpg",
 )
 
 PLAYLIST_IMG_URL = getenv(
     "PLAYLIST_IMG_URL",
-    "https://te.legra.ph/file/c5ae7505b832353b2dbfc.jpg",
+    "assets/Playlist.jpeg",
 )
 
 GLOBAL_IMG_URL = getenv(
     "GLOBAL_IMG_URL",
-    "https://te.legra.ph/file/df481726bdfafdbc7d85c.jpg",
+    "https://telegra.ph/file/d50c381e1b31f93ecf46e.jpg",
 )
 
 STATS_IMG_URL = getenv(
     "STATS_IMG_URL",
-    "https://te.legra.ph/file/df481726bdfafdbc7d85c.jpg",
+    "https://telegra.ph/file/d50c381e1b31f93ecf46e.jpg",
 )
 
 TELEGRAM_AUDIO_URL = getenv(
     "TELEGRAM_AUDIO_URL",
-    "https://te.legra.ph/file/a44ac871100a1aabb360f.jpg",
+    "https://te.legra.ph/file/1d7e3babc4e57cdaabd93.jpg",
 )
 
 TELEGRAM_VIDEO_URL = getenv(
     "TELEGRAM_VIDEO_URL",
-    "https://te.legra.ph/file/a44ac871100a1aabb360f.jpg",
+    "https://te.legra.ph/file/1d7e3babc4e57cdaabd93.jpg",
 )
 
 STREAM_IMG_URL = getenv(
     "STREAM_IMG_URL",
-    "https://te.legra.ph/file/a44ac871100a1aabb360f.jpg",
+    "assets/Stream.jpeg",
 )
 
 SOUNCLOUD_IMG_URL = getenv(
     "SOUNCLOUD_IMG_URL",
-    "https://te.legra.ph/file/a44ac871100a1aabb360f.jpg",
+    "assets/Soundcloud.jpeg",
 )
 
 YOUTUBE_IMG_URL = getenv(
     "YOUTUBE_IMG_URL",
-    "https://te.legra.ph/file/389f11da55c1c1a60a215.jpg",
+    "assets/Youtube.jpeg",
 )
 
 SPOTIFY_ARTIST_IMG_URL = getenv(
     "SPOTIFY_ARTIST_IMG_URL",
-    "https://te.legra.ph/file/a44ac871100a1aabb360f.jpg",
+    "assets/SpotifyArtist.jpeg",
 )
 
 SPOTIFY_ALBUM_IMG_URL = getenv(
     "SPOTIFY_ALBUM_IMG_URL",
-    "https://te.legra.ph/file/a44ac871100a1aabb360f.jpg",
+    "assets/SpotifyAlbum.jpeg",
 )
 
 SPOTIFY_PLAYLIST_IMG_URL = getenv(
     "SPOTIFY_PLAYLIST_IMG_URL",
-    "https://te.legra.ph/file/a44ac871100a1aabb360f.jpg",
+    "assets/SpotifyPlaylist.jpeg",
 )
 
 
@@ -198,7 +176,7 @@ if UPSTREAM_REPO:
         sys.exit()
 
 if PING_IMG_URL:
-    if PING_IMG_URL != "AloneX/assets/Ping.jpeg":
+    if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
             print(
                 "[ERROR] - Your PING_IMG_URL url is wrong. Please ensure that it starts with https://"
@@ -206,7 +184,7 @@ if PING_IMG_URL:
             sys.exit()
 
 if PLAYLIST_IMG_URL:
-    if PLAYLIST_IMG_URL != "AloneX/assets/Playlist.jpeg":
+    if PLAYLIST_IMG_URL != "assets/Playlist.jpeg":
         if not re.match("(?:http|https)://", PLAYLIST_IMG_URL):
             print(
                 "[ERROR] - Your PLAYLIST_IMG_URL url is wrong. Please ensure that it starts with https://"
@@ -214,7 +192,7 @@ if PLAYLIST_IMG_URL:
             sys.exit()
 
 if GLOBAL_IMG_URL:
-    if GLOBAL_IMG_URL != "AloneX/assets/Global.jpeg":
+    if GLOBAL_IMG_URL != "https://te.legra.ph/file/d64a5152f05d0cb7b6f3f.jpg":
         if not re.match("(?:http|https)://", GLOBAL_IMG_URL):
             print(
                 "[ERROR] - Your GLOBAL_IMG_URL url is wrong. Please ensure that it starts with https://"
@@ -223,7 +201,7 @@ if GLOBAL_IMG_URL:
 
 
 if STATS_IMG_URL:
-    if STATS_IMG_URL != "AloneX/assets/Stats.jpeg":
+    if STATS_IMG_URL != "https://te.legra.ph/file/d64a5152f05d0cb7b6f3f.jpg":
         if not re.match("(?:http|https)://", STATS_IMG_URL):
             print(
                 "[ERROR] - Your STATS_IMG_URL url is wrong. Please ensure that it starts with https://"
@@ -232,7 +210,7 @@ if STATS_IMG_URL:
 
 
 if TELEGRAM_AUDIO_URL:
-    if TELEGRAM_AUDIO_URL != "AloneX/assets/Audio.jpeg":
+    if TELEGRAM_AUDIO_URL != "https://te.legra.ph/file/1d7e3babc4e57cdaabd93.jpg":
         if not re.match("(?:http|https)://", TELEGRAM_AUDIO_URL):
             print(
                 "[ERROR] - Your TELEGRAM_AUDIO_URL url is wrong. Please ensure that it starts with https://"
@@ -241,7 +219,7 @@ if TELEGRAM_AUDIO_URL:
 
 
 if STREAM_IMG_URL:
-    if STREAM_IMG_URL != "AloneX/assets/Stream.jpeg":
+    if STREAM_IMG_URL != "assets/Stream.jpeg":
         if not re.match("(?:http|https)://", STREAM_IMG_URL):
             print(
                 "[ERROR] - Your STREAM_IMG_URL url is wrong. Please ensure that it starts with https://"
@@ -250,7 +228,7 @@ if STREAM_IMG_URL:
 
 
 if SOUNCLOUD_IMG_URL:
-    if SOUNCLOUD_IMG_URL != "AloneX/assets/Soundcloud.jpeg":
+    if SOUNCLOUD_IMG_URL != "assets/Soundcloud.jpeg":
         if not re.match("(?:http|https)://", SOUNCLOUD_IMG_URL):
             print(
                 "[ERROR] - Your SOUNCLOUD_IMG_URL url is wrong. Please ensure that it starts with https://"
@@ -258,7 +236,7 @@ if SOUNCLOUD_IMG_URL:
             sys.exit()
 
 if YOUTUBE_IMG_URL:
-    if YOUTUBE_IMG_URL != "AloneX/assets/Youtube.jpeg":
+    if YOUTUBE_IMG_URL != "assets/Youtube.jpeg":
         if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
             print(
                 "[ERROR] - Your YOUTUBE_IMG_URL url is wrong. Please ensure that it starts with https://"
@@ -267,14 +245,9 @@ if YOUTUBE_IMG_URL:
 
 
 if TELEGRAM_VIDEO_URL:
-    if TELEGRAM_VIDEO_URL != "AloneX/assets/Video.jpeg":
+    if TELEGRAM_VIDEO_URL != "https://te.legra.ph/file/1d7e3babc4e57cdaabd93.jpg":
         if not re.match("(?:http|https)://", TELEGRAM_VIDEO_URL):
             print(
                 "[ERROR] - Your TELEGRAM_VIDEO_URL url is wrong. Please ensure that it starts with https://"
             )
             sys.exit()
-
-if not MUSIC_BOT_NAME.isascii():
-    print(
-        "[KYA RE LAVDE] - BOHOT FONT LAGANE KA SHAUKH HAI. JAA PHIR IRO KO APNI CHUMT DEKE AA"
-    )
